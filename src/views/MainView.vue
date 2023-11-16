@@ -1,15 +1,19 @@
 <template lang='pug'>
 #fullpage
   .section
-    Home
-  .section
     Welcome
+  .section
+    Home
   .section
     About
   .section.bg-dark
     Lindenhof
   .section
-    Activities
+    Activities1
+  .section
+    Activities2
+  .section
+    Activities3
   .section
     Principles
   .section
@@ -22,7 +26,9 @@ import Home from '@/components/slides/Home.vue'
 import Welcome from '@/components/slides/Welcome.vue'
 import About from '@/components/slides/About.vue'
 import Lindenhof from '@/components/slides/Lindenhof.vue'
-import Activities from '@/components/slides/Activities.vue'
+import Activities1 from '@/components/slides/Activities1.vue'
+import Activities2 from '@/components/slides/Activities2.vue'
+import Activities3 from '@/components/slides/Activities3.vue'
 import Principles from '@/components/slides/Principles.vue'
 import Pricing from '@/components/slides/Pricing.vue'
 
@@ -33,7 +39,9 @@ export default {
     Welcome,
     About,
     Lindenhof,
-    Activities,
+    Activities1,
+    Activities2,
+    Activities3,
     Principles,
     Pricing
   },
@@ -41,10 +49,13 @@ export default {
     new fullpage('#fullpage', {
       licenseKey: 'licenseKey',
       anchors: [
+        'welcome',
         'home',
         'about',
         'lindenhof',
-        'activities',
+        'activities1',
+        'activities2',
+        'activities3',
         'principles',
         'pricing'
       ],

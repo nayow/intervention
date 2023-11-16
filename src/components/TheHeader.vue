@@ -5,7 +5,7 @@
   .item.item-menu.d-inline-flex.justify-content-evenly.d-sm-inline
     a(href='#about' data-menuanchor='about') About
     a(href='#lindenhof' data-menuanchor='lindenhof') Lindenhof
-    a(href='#activities' data-menuanchor='activities') Activities
+    a(href='#activities' data-menuanchor='activities1') Activities
     a(href='#principles' data-menuanchor='principles') Principles
     a(href='#pricing' data-menuanchor='pricing') Pricing
 </template>
