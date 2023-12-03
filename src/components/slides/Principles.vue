@@ -1,10 +1,10 @@
 <template lang="pug">
 .flex.flex-col.h-full.w-full
-  img.absolute(class="min-w-[150%]" src="@/assets/images/8/theme.svg")
+  img.absolute(style="min-width: 150%" src="@/assets/images/8/theme.svg")
   
-  .relative.p-6.flex.flex-co
+  .relative.p-6.flex.flex-col.flex-1
     .title As long as you follow our principles
-    .flex.flex-col.gap-3.text-sm.text-justify.p-4(class="w-2/3 rounded rounded-[10px]" style="background: rgb(230, 230, 230, 0.75)")
+    .m-auto.flex.flex-col.gap-3.text-sm.text-justify.p-4(class="w-2/3 rounded rounded-[10px]" style="background: rgb(230, 230, 230, 0.75)")
       div Heavily inspired by the principles of Burning Man, we have created our own three Principles: 
       div
         span.font-semibold Sharing and caring :&nbsp;
@@ -20,6 +20,9 @@
 </template>
 
 <script>
+export default {
+  name: 'Principles',
+}
 </script>
 
 <style scoped>

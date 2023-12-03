@@ -1,7 +1,7 @@
 
 <template lang="pug">
-TheHeader
-RouterView
+TheHeader.transition.duration-200(:class="{ 'hide-header': hideHeader }")
+RouterView(@onSlideLeave="onSlideLeave")
 </template>
 
 <script>
@@ -14,7 +14,7 @@ export default {
   },
   data() {
     return {
-
+      hideHeader: false
     }
   },
 
@@ -23,15 +23,16 @@ export default {
   },
 
   methods: {
-
+    onSlideLeave(direction) {
+      this.hideHeader = direction === 'down'
+    }
   }
 }
 </script>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+.hide-header {
+  transform: translateY(-100%);
 }
 
 .logo {

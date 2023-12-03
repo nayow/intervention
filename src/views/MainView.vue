@@ -48,6 +48,8 @@ export default {
   mounted() {
     new fullpage('#fullpage', {
       licenseKey: 'licenseKey',
+      fixedElements: '#nav',
+      menu: '#nav',
       anchors: [
         'welcome',
         'home',
@@ -59,7 +61,13 @@ export default {
         'principles',
         'pricing'
       ],
-      menu: '#nav',
+      onLeave: (origin, destination, direction, trigger) => {
+        if (trigger === 'menu') return
+        this.$emit('onSlideLeave', direction)
+      },
+      afterLoad: () => {
+        document.querySelector('.fp-watermark').hidden = true
+      }
     })
   }
 }
